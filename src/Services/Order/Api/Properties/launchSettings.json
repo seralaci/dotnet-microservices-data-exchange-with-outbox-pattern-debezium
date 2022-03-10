@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "LicenseManager": {
+    "OrderApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",
