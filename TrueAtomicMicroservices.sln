@@ -37,6 +37,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifier", "Notifier", "{5C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifier", "src\Services\Notifier\Notifier\Notifier.csproj", "{FBC2E07D-8543-413F-A4E8-92D177904C90}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "mssql", "mssql", "{573BEDE3-BC47-40C1-94C1-9F414849894C}"
+	ProjectSection(SolutionItems) = preProject
+		setup\mssql\Dockerfile = setup\mssql\Dockerfile
+		setup\mssql\build.sql = setup\mssql\build.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +70,7 @@ Global
 		{CB6BBF00-639F-41F0-A6AB-002B56B09C4C} = {AF6330AA-637D-4F3E-B72F-9E099DD6C094}
 		{5C074788-9F4E-4B6D-B582-BAB80BE5E3B7} = {86701B0D-E849-44BB-8017-1F7922CF582E}
 		{FBC2E07D-8543-413F-A4E8-92D177904C90} = {5C074788-9F4E-4B6D-B582-BAB80BE5E3B7}
+		{573BEDE3-BC47-40C1-94C1-9F414849894C} = {54715D42-2217-4F26-B06D-1F4EED171CDC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {54CC752A-E440-4A13-8065-86D95BF2C59B}

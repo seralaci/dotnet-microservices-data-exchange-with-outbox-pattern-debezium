@@ -19,12 +19,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-using (var scope = app.Services.CreateScope())
-{
-    var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
-    db.Database.Migrate();
-}
-
 app.MapPost("/orders", async (PurchaseOrder order, OrderDbContext db) =>
 {
     db.Orders.Add(order);
