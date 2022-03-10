@@ -6,7 +6,7 @@
 * Select 'All' debug option and start debugging. (for vs code)
 * Wait until all microservices are up and running.
 
-## Register Debezium Postgres Connectors to Kafka Connect
+## Register Debezium SQL Server Connector to Kafka Connect
 Use /http/debezium.http to register the debezium connector (CreateOrderServiceConnector)
 
 ## Kafdrop
