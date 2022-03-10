@@ -3,7 +3,7 @@ POST {{ orderServiceHost }}/orders
 Content-Type: application/json
 
 {
-  "firstName": "Firstname 3",
+  "firstName": "Firstname",
   "lastName": "Lastname",
   "email": "me@compnany.com"
 }

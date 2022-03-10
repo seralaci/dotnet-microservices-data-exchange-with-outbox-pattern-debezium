@@ -16,14 +16,14 @@ EXEC sys.sp_cdc_enable_table
     @supports_net_changes = 1
 ```
 
-# SQL - Disable change data capture
+# SQL - Check change data capture configuration
 
 ```sql
-EXEC sys.sp_cdc_disable_db
+EXEC sys.sp_cdc_help_change_data_capture
 ```
 
 ## Debezium Connectors
-Use /http/debezium.http to register the debezium connector
+Use /http/debezium.http to register the debezium connector (CreateOrderServiceConnector)
 
 ## Kafdrop
 http://localhost:9000/
