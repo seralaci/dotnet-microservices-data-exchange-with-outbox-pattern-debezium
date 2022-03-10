@@ -1,0 +1,29 @@
+{
+    "name": "order_service_outbox_connector",
+    "config": {
+        "connector.class": "io.debezium.connector.sqlserver.SqlServerConnector",
+        "database.hostname": "sqlserver",
+        "database.port": "1433",
+        "database.user": "sa",
+        "database.password": "123456Aa",
+        "database.dbname": "TrueAtomicMicroservices-Db",
+        "database.server.name": "sqlserver",
+        "table.whitelist": "dbo.OutboxEvents",
+        "slot.name": "order_slot",
+        "database.history.kafka.bootstrap.servers": "kafka:29092",
+        "database.history.kafka.topic": "schema-changes.order_service",
+        "transforms": "outbox",
+        "transforms.outbox.type": "io.debezium.transforms.outbox.EventRouter",
+        "transforms.outbox.table.field.event.id": "Id",
+        "transforms.outbox.table.field.event.key": "AggregateId",
+        "transforms.outbox.table.field.event.payload": "Payload",
+        "transforms.outbox.route.by.field": "AggregateType",
+        "transforms.outbox.route.topic.replacement": "${routedByValue}.events",
+        "transforms.outbox.table.fields.additional.placement": "Type:header:eventType",
+        "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+        "key.converter.schemas.enable": "false",
+        "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+        "value.converter.schemas.enable": "false",
+        "include.schema.changes": "false"
+    }
+}

@@ -1,0 +1,71 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Api", "src\Services\Order\Api\Order.Api.csproj", "{9044F24B-0C52-47D1-ABE9-4714B017DC57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{86701B0D-E849-44BB-8017-1F7922CF582E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{85BC8E71-0D92-454E-8657-91D839F5A38C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6F1E04FA-84D3-4869-8524-8B798DFE7F8E}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+		docker-compose.yml = docker-compose.yml
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTTP Client", "HTTP Client", "{D785D786-7D2E-475C-88D6-CF00976C39CE}"
+	ProjectSection(SolutionItems) = preProject
+		http\debezium.http = http\debezium.http
+		http\http-client.env.json = http\http-client.env.json
+		http\order.http = http\order.http
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{54715D42-2217-4F26-B06D-1F4EED171CDC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Debezium", "Debezium", "{AF6330AA-637D-4F3E-B72F-9E099DD6C094}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Connectors", "Connectors", "{CB6BBF00-639F-41F0-A6AB-002B56B09C4C}"
+	ProjectSection(SolutionItems) = preProject
+		setup\debezium\connectors\order_service_outbox_connector_config.json = setup\debezium\connectors\order_service_outbox_connector_config.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notifier", "Notifier", "{5C074788-9F4E-4B6D-B582-BAB80BE5E3B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Notifier", "src\Services\Notifier\Notifier\Notifier.csproj", "{FBC2E07D-8543-413F-A4E8-92D177904C90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9044F24B-0C52-47D1-ABE9-4714B017DC57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9044F24B-0C52-47D1-ABE9-4714B017DC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9044F24B-0C52-47D1-ABE9-4714B017DC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9044F24B-0C52-47D1-ABE9-4714B017DC57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBC2E07D-8543-413F-A4E8-92D177904C90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBC2E07D-8543-413F-A4E8-92D177904C90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBC2E07D-8543-413F-A4E8-92D177904C90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBC2E07D-8543-413F-A4E8-92D177904C90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9044F24B-0C52-47D1-ABE9-4714B017DC57} = {85BC8E71-0D92-454E-8657-91D839F5A38C}
+		{85BC8E71-0D92-454E-8657-91D839F5A38C} = {86701B0D-E849-44BB-8017-1F7922CF582E}
+		{D785D786-7D2E-475C-88D6-CF00976C39CE} = {6F1E04FA-84D3-4869-8524-8B798DFE7F8E}
+		{54715D42-2217-4F26-B06D-1F4EED171CDC} = {6F1E04FA-84D3-4869-8524-8B798DFE7F8E}
+		{AF6330AA-637D-4F3E-B72F-9E099DD6C094} = {54715D42-2217-4F26-B06D-1F4EED171CDC}
+		{CB6BBF00-639F-41F0-A6AB-002B56B09C4C} = {AF6330AA-637D-4F3E-B72F-9E099DD6C094}
+		{5C074788-9F4E-4B6D-B582-BAB80BE5E3B7} = {86701B0D-E849-44BB-8017-1F7922CF582E}
+		{FBC2E07D-8543-413F-A4E8-92D177904C90} = {5C074788-9F4E-4B6D-B582-BAB80BE5E3B7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54CC752A-E440-4A13-8065-86D95BF2C59B}
+	EndGlobalSection
+EndGlobal

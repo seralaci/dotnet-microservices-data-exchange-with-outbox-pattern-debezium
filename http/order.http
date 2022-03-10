@@ -1,0 +1,20 @@
+# @name CreateOrder
+POST {{ orderServiceHost }}/orders
+Content-Type: application/json
+
+{
+  "firstName": "Firstname 3",
+  "lastName": "Lastname",
+  "email": "me@compnany.com"
+}
+
+> {%
+    client.global.set("order_id", response.body["id"]);
+%}
+
+### 
+
+# @name FindOrder
+GET {{ orderServiceHost }}/orders/{{ order_id }}
+Accept: application/json
+
