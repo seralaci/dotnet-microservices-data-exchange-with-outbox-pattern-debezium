@@ -9,6 +9,7 @@
         "database.dbname": "TrueAtomicMicroservices-Db",
         "database.server.name": "sqlserver",
         "table.whitelist": "dbo.OutboxEvents",
+        "tombstones.on.delete" : "false",
         "slot.name": "order_slot",
         "database.history.kafka.bootstrap.servers": "kafka:29092",
         "database.history.kafka.topic": "schema-changes.order_service",
