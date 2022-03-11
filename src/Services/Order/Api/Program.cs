@@ -30,7 +30,6 @@ app.MapPost("/orders", async (PurchaseOrder order, OrderDbContext db) =>
         payload: JsonSerializer.Serialize(new OrderCreatedEvent(order))
     );
     db.OutboxEvents.Add(outboxEvent);
-    db.OutboxEvents.Add(outboxEvent);
     
     await db.SaveChangesAsync();
 
