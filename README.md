@@ -1,5 +1,11 @@
 # True Atomic Microservices Implementation with Debezium and Outbox Pattern to Ensure Data Consistency
 
+## Overall Architecture
+
+The overall architecture of the solution can be seen in the following picture:
+
+![Overall Architecture](./docs/architecture.png)
+
 ## Run in Debug Mode
 
 * Run 'docker-compose up' and wait for all infra to up and running.
@@ -7,11 +13,12 @@
 * Wait until all microservices are up and running.
 
 ## Register Debezium SQL Server Connector to Kafka Connect
+
 Use /http/debezium.http to register the debezium connector (CreateOrderServiceConnector)
 
 ## Kafdrop
-http://localhost:9000/
 
+http://localhost:9000/
 
 ## smtp4dev
 http://localhost:5010/
