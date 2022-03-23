@@ -5,7 +5,23 @@ Content-Type: application/json
 {
   "firstName": "Firstname",
   "lastName": "Lastname",
-  "email": "me@compnany.com"
+  "email": "me@company.com"
+}
+
+> {%
+    client.global.set("order_id", response.body["id"]);
+%}
+
+### 
+
+# @name CreateOrderWithoutAdditionalSpace
+POST {{ orderServiceHost }}/orders/no-additional-space
+Content-Type: application/json
+
+{
+  "firstName": "No",
+  "lastName": "Space",
+  "email": "no@space.com"
 }
 
 > {%
